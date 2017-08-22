@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU9-vq-RgH">
+                                <rect key="frame" x="231" y="28" width="156" height="30"/>
+                                <state key="normal" title="Get Authorize Token">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAuthToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqk-GI-Y8q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C40-ZB-ILd">
+                                <rect key="frame" x="231" y="66" width="156" height="30"/>
+                                <state key="normal" title="Request Access Token">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="requestAccessToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqd-vx-ki1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px5-uN-8Zi">
+                                <rect key="frame" x="231" y="142" width="156" height="30"/>
+                                <state key="normal" title="Save Access Token">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveTokenIntoKeychain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppq-Oa-xUu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grJ-bv-4pn">
+                                <rect key="frame" x="231" y="180" width="156" height="30"/>
+                                <state key="normal" title="Load Access Token">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadTokenFromKeychain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MkL-n1-8sx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fz3-F6-Sdo">
+                                <rect key="frame" x="362" y="225" width="300" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Gqp-rL-jKo"/>
+                                    <constraint firstAttribute="width" constant="300" id="fCR-YB-Nno"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnL-1l-2Rf">
+                                <rect key="frame" x="231" y="104" width="156" height="30"/>
+                                <state key="normal" title="Refresh Token">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getRefershToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKL-WU-PaQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="PnL-1l-2Rf" secondAttribute="centerX" constant="-9" id="0TZ-c1-bvk"/>
+                            <constraint firstItem="pU9-vq-RgH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="215" id="1Ab-Co-niC"/>
+                            <constraint firstItem="pU9-vq-RgH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4kN-5G-AEy"/>
+                            <constraint firstItem="C40-ZB-ILd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="215" id="7Nx-c7-DGs"/>
+                            <constraint firstItem="fz3-F6-Sdo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="159" id="B5Y-D9-YiB"/>
+                            <constraint firstItem="PnL-1l-2Rf" firstAttribute="top" secondItem="pU9-vq-RgH" secondAttribute="bottom" constant="46" id="F2F-Vc-QSA"/>
+                            <constraint firstItem="grJ-bv-4pn" firstAttribute="top" secondItem="px5-uN-8Zi" secondAttribute="bottom" constant="8" id="Fgm-AB-sWX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C40-ZB-ILd" secondAttribute="trailing" constant="197" id="HXd-Pk-eIy"/>
+                            <constraint firstItem="C40-ZB-ILd" firstAttribute="top" secondItem="PnL-1l-2Rf" secondAttribute="bottom" constant="-68" id="IDy-4X-tle"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fz3-F6-Sdo" secondAttribute="trailing" constant="159" id="KKA-RD-1eo"/>
+                            <constraint firstAttribute="centerX" secondItem="C40-ZB-ILd" secondAttribute="centerX" constant="-9" id="ODF-cl-3pT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="px5-uN-8Zi" secondAttribute="trailing" constant="197" id="SCa-6r-zDI"/>
+                            <constraint firstAttribute="centerX" secondItem="px5-uN-8Zi" secondAttribute="centerX" constant="-9" id="Vsh-t6-Y37"/>
+                            <constraint firstAttribute="centerX" secondItem="pU9-vq-RgH" secondAttribute="centerX" constant="-9" id="WJc-WP-bEA"/>
+                            <constraint firstItem="px5-uN-8Zi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="215" id="atM-KJ-TJ1"/>
+                            <constraint firstItem="px5-uN-8Zi" firstAttribute="top" secondItem="C40-ZB-ILd" secondAttribute="bottom" constant="46" id="goy-by-zMx"/>
+                            <constraint firstItem="grJ-bv-4pn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="122" id="hBI-PS-SCr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="grJ-bv-4pn" secondAttribute="trailing" constant="197" id="ivl-Jo-gbU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pU9-vq-RgH" secondAttribute="trailing" constant="197" id="k6M-tP-X6n"/>
+                            <constraint firstItem="grJ-bv-4pn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="215" id="kdL-1k-GB2"/>
+                            <constraint firstAttribute="centerX" secondItem="fz3-F6-Sdo" secondAttribute="centerX" id="lMY-WO-prt"/>
+                            <constraint firstAttribute="centerX" secondItem="grJ-bv-4pn" secondAttribute="centerX" constant="-9" id="p7e-Zt-Vdq"/>
+                            <constraint firstItem="fz3-F6-Sdo" firstAttribute="top" secondItem="grJ-bv-4pn" secondAttribute="bottom" constant="15" id="u4w-uP-sjd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="B5Y-D9-YiB"/>
+                                <exclude reference="KKA-RD-1eo"/>
+                                <exclude reference="1Ab-Co-niC"/>
+                                <exclude reference="k6M-tP-X6n"/>
+                                <exclude reference="7Nx-c7-DGs"/>
+                                <exclude reference="HXd-Pk-eIy"/>
+                                <exclude reference="SCa-6r-zDI"/>
+                                <exclude reference="atM-KJ-TJ1"/>
+                                <exclude reference="hBI-PS-SCr"/>
+                                <exclude reference="ivl-Jo-gbU"/>
+                                <exclude reference="kdL-1k-GB2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="lblResult" destination="fz3-F6-Sdo" id="xPf-HF-DlT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="399"/>
+        </scene>
+    </scenes>
+</document>
